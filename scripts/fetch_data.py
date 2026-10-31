@@ -16,7 +16,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 BASE = "https://data.elexon.co.uk/bmrs/api/v1/datasets"
-OUT = Path(__file__).resolve().parents[1] / "data" / "raw"
+OUT = Path(__file__).resolve().parents[1] / "backend" / "data" / "raw"
 CHUNK_DAYS = 3  # small chunks: stream endpoints may cap the date range
 
 

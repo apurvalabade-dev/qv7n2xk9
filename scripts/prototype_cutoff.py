@@ -15,7 +15,7 @@ from collections import defaultdict
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 
-RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
+RAW = Path(__file__).resolve().parents[1] / "backend" / "data" / "raw"
 UTC = timezone.utc
 FIRST_DAY = date(2026, 1, 1)
 LAST_DAY = date(2026, 1, 31)

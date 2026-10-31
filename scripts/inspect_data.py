@@ -5,7 +5,7 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 
-RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
+RAW = Path(__file__).resolve().parents[1] / "backend" / "data" / "raw"
 
 
 def ts(s: str) -> datetime:

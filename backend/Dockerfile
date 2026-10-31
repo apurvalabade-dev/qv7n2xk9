@@ -7,7 +7,6 @@ COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY backend/ /srv/backend/
-COPY data/raw/ /srv/data/raw/
 
 RUN useradd --create-home appuser
 USER appuser

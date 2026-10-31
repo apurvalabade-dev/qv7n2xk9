@@ -16,7 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from . import analysis as an
 
-DATA_DIR = Path(os.environ.get("DATA_DIR", Path(__file__).resolve().parents[2] / "data" / "raw"))
+DATA_DIR = Path(os.environ.get("DATA_DIR", Path(__file__).resolve().parents[1] / "data" / "raw"))
 DEFAULT_CUTOFF = "09:20"
 
 GATES = [

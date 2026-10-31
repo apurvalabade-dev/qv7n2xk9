@@ -1,0 +1,52 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #111827;
+  --muted: #6b7280;
+  --card: #f3f4f6;
+  --border: #e5e7eb;
+  --accent: #3b82f6;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --fg: #e5e7eb;
+    --muted: #94a3b8;
+    --card: #1e293b;
+    --border: #334155;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.app { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { margin: 0 0 4px; font-size: 1.6rem; }
+h3 { margin: 0 0 4px; font-size: 1rem; }
+.sub, .note { color: var(--muted); font-size: 0.9rem; margin: 4px 0 12px; }
+.headline { font-size: 1.05rem; line-height: 1.5; margin: 12px 0 16px; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 12px 0 16px; }
+.controls label { display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; color: var(--muted); }
+input, select, button {
+  font: inherit; padding: 6px 10px; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+}
+button { cursor: pointer; }
+nav { display: flex; gap: 8px; margin-left: auto; }
+button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 12px 0 20px; }
+.stat { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+.stat-label { font-size: 0.8rem; color: var(--muted); }
+.stat-value { font-size: 1.3rem; font-weight: 600; margin-top: 2px; }
+.stat-hint { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); gap: 16px; }
+.chart-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 12px 4px; }
+.chart { height: 300px; }
+.tip { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; font-size: 0.85rem; }
+.status { color: var(--muted); }
+.status.error { color: #ef4444; }
+footer { margin-top: 32px; border-top: 1px solid var(--border); padding-top: 12px; }
+footer h4 { margin: 0 0 4px; }
+footer ul { color: var(--muted); font-size: 0.85rem; padding-left: 18px; }
+@media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
